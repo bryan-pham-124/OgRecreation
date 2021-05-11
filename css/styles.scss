@@ -1,0 +1,478 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    border: 30px solid #1c2c59;
+  }
+  
+.splash {
+ 
+    margin: auto;
+    color: #1c2c59;
+    min-height: 550px;
+   
+}
+
+
+.fa-bars {
+    font-size: 30px; // font-sizee not height changes size of hamburger
+
+}
+
+ 
+.sm-logos {
+
+    margin-top: 20px;
+    
+    border-top: 2px solid #1c2c59;
+    i {
+        font-size: 30px;
+    }
+   
+}
+
+
+
+.address-main {
+    margin-top: 20px;
+    text-align: center;
+
+    a {
+        text-decoration: none;
+        color: #5d6479;
+        font-weight: lighter;
+        font-size:  15px;
+    }
+
+    span {
+        margin-left: 10px;
+    }
+}  
+
+
+
+.topnav .icon, .active, .address, .sm-logos {
+    display: none;
+}
+
+.topnav #myLinks {
+    text-align: center;
+    padding: 0 30px;
+    margin-top: 20px;
+}
+
+.topnav a {
+ 
+    display: relative;
+    //changed code
+    text-align: center;
+    color: #1c2c59;
+    font-weight: bold;
+    font-size: 13px;  // WILL MOVE TO 1250PX min size
+    position: relative;
+    text-decoration: none;
+    padding-bottom: 10px;
+    margin-right: 25px;
+}
+
+
+// nav animations
+
+    
+.topnav   a:not(.icon):not(.address):not(.sm-logos):not(.reserve):hover {
+    color: #1c2c59;
+}
+
+
+.topnav  a:not(.icon):not(.address):not(.sm-logos):not(.reserve):before {
+    
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+    
+}
+
+.topnav   a:not(.icon):not(.address):not(.sm-logos):not(.reserve):hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+
+.topnav .reserve {
+    border: 2px solid #1c2c59;
+    padding: 12px 25px ;
+    transition: .6s;
+}
+
+
+.topnav .reserve:hover {
+    background-color: #FCBA4F;
+}
+//naviations end
+
+
+.splash-image {
+
+
+    .image {
+        background: url("../img/og-image.png");
+        background-repeat: no-repeat;
+        background-size: 300px 100px;
+        margin-top: 50px;
+
+        background-position: center top;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+
+        height: 120px;
+        //background-color: #ebd456;
+    }
+
+    .sub-text {
+
+        $diamond-size: 10px;
+
+        padding: 0px;
+        margin: 0px;
+        color: #1c2c59;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 20px;
+        list-style: none;
+
+        .outline-txt {
+            color: white;
+            -webkit-text-stroke: .75px #1c2d58;
+        }
+
+        li {
+            margin-top: 15px;
+            font-size: 20px;
+        }
+        
+
+        .d-line {
+            background: url("../img/diamond.PNG");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 25px 25px;
+            height: 50px;
+            width: 100%;
+           
+           
+
+        } // d-line
+
+      
+    } // sub-texT
+
+} //splash-image
+
+
+.chevron {
+    margin-left: 30px;
+    display: flex;
+    justify-content: center;
+    img {
+        margin-top: 10px;
+        animation: MoveUpDown 1s linear infinite;
+        position: absolute;
+        margin-left: -15px;
+   
+        height: 30px;
+
+        color: #1c2d58;
+    }
+
+    
+    @keyframes MoveUpDown {
+        0%, 100% {
+            margin-top: 10px;
+       
+        }
+        50% {
+            margin-top: 30px;
+        }
+    }
+  
+} // chevron end
+
+.reserve-button {
+    position: fixed;
+    bottom: 0;
+    margin-top: 105px;
+  
+    text-align: center;
+    width: 100%;
+    background-color: #FCBA4F;
+    z-index: 100;
+    text-decoration: none;
+    color: #1c2d58;
+    font-size: 20px;
+    padding: 20px 0px;
+    font-weight: bold;
+    margin-left: -25px;
+    transition: .5s;
+    border-top: 5px solid transparent;
+
+    &:hover {
+        border-top: 3px solid #1c2d58;
+    }
+
+} // reverse button
+
+.menu {
+    margin-top: 50px;
+    padding: 20px;
+    padding-top: 0px;
+    display: flex;
+    justify-content: center;
+
+    .container  {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-auto-rows: minmax(400px, auto);    
+        gap: 30px;
+
+        .img-food {
+            background: url("../img/og-food.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+          
+            background-position: center top;
+
+        }
+
+        .menu-txt {
+            border: 2px solid #1c2c59;
+            padding: 30px;
+            
+            color: #1c2c59;
+            line-height: 2;
+            border-radius: 25px;
+            .menu-btn {
+                text-decoration: none;
+                margin-top: 30px;
+                border: 2px solid #1c2c59;
+               
+                width: 300px;
+                height: 60px;
+                font-weight: bold;
+                
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+    
+                transition: .6s;
+                &:hover {
+                    background-color: #FCBA4F;
+                }
+
+            } //btn end
+        } // txt end
+    } // container end
+} // menu end
+
+
+
+@media only screen and (min-width: 700px) {    
+
+    
+        
+    .splash {
+    
+        min-height: 600px;
+    
+    }
+
+   
+    .sub-text  { // force the  div bg images to be inline with other elements
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+
+    .sub-text li{
+
+        max-width: 100px;
+    }
+
+    .splash-image {
+        .image {
+            margin-top: 100px;
+            background-size:  400px 200px;
+            height: 235px;
+        }
+    } //splash-image
+
+
+    .menu {
+        padding-right: 75px;
+        padding-left:  75px;
+        .container {  
+            grid-auto-rows: minmax(450px, auto);
+            //grid-template-columns: repeat(1, 1fr);
+        }
+
+        .img-food {
+            margin-top: 0px;
+            background-size: 900px auto;
+            //min-width: 400px;
+        }
+
+        .menu-txt {
+           padding: 30px 60px !important;
+           h1 {
+               font-size: 40px;
+           }
+           p {
+               font-size: 17px;
+           }
+        }
+
+    } //menu end
+
+
+} //mq 700 end
+
+@media only screen and (min-width: 910px) {    
+
+    .menu .container {
+             
+        grid-template-columns: repeat(2, 1fr);
+           
+     } //menu end
+
+}
+
+
+@media only screen and (min-width: 1176px) {    
+
+    .reserve-button {
+        display: none;
+    }
+    
+    .sub-text  {
+        margin-top: 0px;
+        li {
+            max-width: 100px;
+        }    
+    }
+
+
+
+    .splash-image {
+        .image {
+            margin-top: 100px;
+            background-size: auto auto;
+            height: 300px;
+           // background-color: turquoise;
+        }
+    } //splash-image
+
+
+
+    .menu {
+       // background-color: #FCBA4F;
+       .container {
+            grid-auto-rows: minmax(600px, auto);
+            .menu-txt {  
+                padding: 30px 90px !important;
+                display: flex;
+                align-items: center;
+            }
+       }
+    } //menu end
+
+} //mq 1176 end
+
+
+@media only screen and (max-width: 1175px) {
+
+
+    .topnav .reserve {
+        border: none;
+      
+    }
+
+    .topnav  a:not(.icon):not(.address):not(.sm-logos):before {
+    
+        
+        width: 40%;
+      
+    }
+
+
+    /*Navnar collapsed  */
+
+    .topnav {
+        overflow: hidden;
+        position: relative;
+        margin-left: 30px;
+      
+    }
+
+    .topnav #myLinks {
+        display: none;
+        margin-top: 0px;
+    
+    }
+
+    .topnav  .address  {
+        text-decoration: none;
+        color: #5d6479;
+        font-weight: lighter;
+        font-size:  13px;
+
+    
+    }
+
+
+    .topnav a {
+        // color: white;
+        padding: 14px 16px;
+        
+        //font-size: 17px;
+        display: block;
+
+        //changed code
+        text-align: center;
+        color: #1c2c59;
+        font-weight: bold;
+        font-size: 18px;
+        position: relative;
+        text-decoration: none;
+    }
+
+
+
+    .topnav a.icon {
+        //background: black;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+
+    .active {
+        background-color: white;
+        color: white;
+        opacity: 0;
+    }
+
+    /* nav collapse end */
+
+
+
+} // nav mq
